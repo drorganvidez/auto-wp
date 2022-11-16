@@ -31,6 +31,8 @@ services:
       - MYSQL_PASSWORD=${DATABASE_PASSWORD:-password}
       - MYSQL_DATABASE=${COMPOSE_PROJECT_NAME:-wordpress}
     restart: always
+    ports:
+      - "33062:3306"
 
   phpmyadmin:
     depends_on:
